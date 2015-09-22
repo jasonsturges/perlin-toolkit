@@ -1,6 +1,8 @@
 # Perlin Toolkit
 
-Randomly generated animated background animations using perlin noise to produce unique user experiences each visit. 
+Randomly generated animated background animations using perlin noise to produce unique user experiences each visit.
+
+[Demo it in action here](http://labs.jasonsturges.com/blog/perlin-toolkit/).
 
 Choose a preset for animation in the component parameters to select an atmosphere of:
 
