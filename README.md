@@ -1,6 +1,6 @@
 # Perlin Toolkit
 
-Randomly generated animated background animations using perlin noise to produce unique user experiences each visit.
+Randomly generated background animations using perlin noise to produce unique user experiences each visit.
 
 [Demo it in action here](http://labs.jasonsturges.com/blog/perlin-toolkit/).
 
