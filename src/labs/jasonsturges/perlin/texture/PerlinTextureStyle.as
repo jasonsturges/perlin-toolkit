@@ -16,31 +16,16 @@ package labs.jasonsturges.perlin.texture {
 public class PerlinTextureStyle {
 
     //------------------------------
-    //  presentation
+    //  model
     //------------------------------
 
-    /** animate function */
     public var animation:Function;
-
-    /** channel options */
     public var channelOptions:uint;
-
-    /** fractal noise */
     public var fractalNoise:Boolean;
-
-    /** gray scale */
     public var grayScale:Boolean;
-
-    /** octaves */
     public var octaves:uint;
-
-    /** offsets */
     public var offsets:Array;
-
-    /** seed */
     public var seed:int;
-
-    /** stitch */
     public var stitch:Boolean;
 
 

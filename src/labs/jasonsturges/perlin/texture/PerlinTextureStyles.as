@@ -12,8 +12,7 @@ import flash.geom.Point;
 import flash.utils.getTimer;
 
 /**
- * Factory of preset perline texture styles
- * provided as a convenience.
+ * Factory of preset perlin texture styles.
  */
 public class PerlinTextureStyles {
 
@@ -22,77 +21,82 @@ public class PerlinTextureStyles {
     //------------------------------
 
     public static function from(name:String):PerlinTextureStyle {
-        switch (name) {
-            case "Aether":
-                return PerlinTextureStyles.AETHER();
+        var style:PerlinTextureStyle;
+        
+        switch (name.toLowerCase()) {
+            case "aether":
+                style = PerlinTextureStyles.AETHER();
                 break;
-            case "Ambient":
-                return PerlinTextureStyles.AMBIENT();
+            case "ambient":
+                style = PerlinTextureStyles.AMBIENT();
                 break;
-            case "Arc":
-                return PerlinTextureStyles.ARC();
+            case "arc":
+                style = PerlinTextureStyles.ARC();
                 break;
-            case "Atomic Cloud":
-                return PerlinTextureStyles.ATOMIC_CLOUD();
+            case "atomic":
+            case "atomic cloud":
+            case "atomic_cloud":
+                style = PerlinTextureStyles.ATOMIC_CLOUD();
                 break;
-            case "Aurora":
-                return PerlinTextureStyles.AURORA();
+            case "aurora":
+                style = PerlinTextureStyles.AURORA();
                 break;
-            case "Caustic":
-                return PerlinTextureStyles.CAUSTIC();
+            case "caustic":
+                style = PerlinTextureStyles.CAUSTIC();
                 break;
-            case "Fog":
-                return PerlinTextureStyles.FOG();
+            case "fog":
+                style = PerlinTextureStyles.FOG();
                 break;
-            case "Fusion":
-                return PerlinTextureStyles.FUSION();
+            case "fusion":
+                style = PerlinTextureStyles.FUSION();
                 break;
-            case "Gasoline":
-                return PerlinTextureStyles.GASOLINE();
+            case "gasoline":
+                style = PerlinTextureStyles.GASOLINE();
                 break;
-            case "Incandescent":
-                return PerlinTextureStyles.INCANDESCENT();
+            case "incandescent":
+                style = PerlinTextureStyles.INCANDESCENT();
                 break;
-            case "Ink":
-                return PerlinTextureStyles.INK();
+            case "ink":
+                style = PerlinTextureStyles.INK();
                 break;
-            case "Lace":
-                return PerlinTextureStyles.LACE();
+            case "lace":
+                style = PerlinTextureStyles.LACE();
                 break;
-            case "Lava":
-                return PerlinTextureStyles.LAVA();
+            case "lava":
+                style = PerlinTextureStyles.LAVA();
                 break;
-            case "Luminous":
-                return PerlinTextureStyles.LUMINOUS();
+            case "luminous":
+                style = PerlinTextureStyles.LUMINOUS();
                 break;
-            case "Marble":
-                return PerlinTextureStyles.MARBLE();
+            case "marble":
+                style = PerlinTextureStyles.MARBLE();
                 break;
-            case "Oil":
-                return PerlinTextureStyles.OIL();
+            case "oil":
+                style = PerlinTextureStyles.OIL();
                 break;
-            case "Rotary":
-                return PerlinTextureStyles.ROTARY();
+            case "rotary":
+                style = PerlinTextureStyles.ROTARY();
                 break;
-            case "Sulfur":
-                return PerlinTextureStyles.SULFUR();
+            case "sulfur":
+                style = PerlinTextureStyles.SULFUR();
                 break;
-            case "Throttle":
-                return PerlinTextureStyles.THROTTLE();
+            case "throttle":
+                style = PerlinTextureStyles.THROTTLE();
                 break;
-            case "Vortex":
-                return PerlinTextureStyles.VORTEX();
+            case "vortex":
+                style = PerlinTextureStyles.VORTEX();
                 break;
         }
 
-        return null;
+        return style;
     }
+
 
     //------------------------------
     //  static textures
     //------------------------------
 
-    /** AMBIENT */
+    /** AMBIENT - Dusty still deep color tones */
     public static function AMBIENT(channelOptions:uint = 7, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -107,7 +111,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** LACE */
+    /** LACE - Soft still of whites with a touch of color */
     public static function LACE(channelOptions:uint = 15, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -122,7 +126,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** MARBLE */
+    /** MARBLE - Still stone pattern */
     public static function MARBLE(channelOptions:uint = 8, grayScale:Boolean = true):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -137,7 +141,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** SULFUR */
+    /** SULFUR - Rusty still, very similar to gasoline texture */
     public static function SULFUR(channelOptions:uint = 3, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -152,11 +156,12 @@ public class PerlinTextureStyles {
         );
     }
 
+
     //------------------------------
     //  animated textures
     //------------------------------
 
-    /** AETHER */
+    /** AETHER - Fluffy upward movement */
     public static function AETHER(channelOptions:uint = 15, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -176,7 +181,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** ARC */
+    /** ARC - High voltage electric arcs */
     public static function ARC(channelOptions:uint = 9, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -196,7 +201,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** ATOMIC_CLOUD */
+    /** ATOMIC_CLOUD - Plumes of smokey mushroom clouds */
     public static function ATOMIC_CLOUD(channelOptions:uint = 1, grayScale:Boolean = true):PerlinTextureStyle {
         return new PerlinTextureStyle(
                 8,
@@ -215,7 +220,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** AURORA */
+    /** AURORA - Gentle sweeping dancing lights */
     public static function AURORA(channelOptions:uint = 7, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -239,7 +244,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** CAUSTIC */
+    /** CAUSTIC - Underwater patterns */
     public static function CAUSTIC(channelOptions:uint = 12, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -271,7 +276,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** FOG */
+    /** FOG - Dense white mist */
     public static function FOG(channelOptions:uint = 1, grayScale:Boolean = true):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -300,7 +305,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** FUSION */
+    /** FUSION - Fast bursts of bright light */
     public static function FUSION(channelOptions:uint = 15, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -317,7 +322,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** GASOLINE */
+    /** GASOLINE - Rusty detailed smog */
     public static function GASOLINE(channelOptions:uint = 3, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -357,7 +362,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** INCANDESCENT */
+    /** INCANDESCENT - Soft light lit by white hot wire */
     public static function INCANDESCENT(channelOptions:uint = 9, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -377,7 +382,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** INK */
+    /** INK - Blotchy puddles spilling */
     public static function INK(channelOptions:uint = 1, grayScale:Boolean = true):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -397,7 +402,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** LAVA */
+    /** LAVA - Pools of red magma flowing */
     public static function LAVA(channelOptions:uint = 1, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -417,7 +422,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** LUMINOUS */
+    /** LUMINOUS - Magical poofs of clouds */
     public static function LUMINOUS(channelOptions:uint = 15, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -441,7 +446,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** OIL */
+    /** OIL - Slicks of rich color floating on the surface of water */
     public static function OIL(channelOptions:uint = 7, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -460,7 +465,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** ROTARY */
+    /** ROTARY - Dark circular movement */
     public static function ROTARY(channelOptions:uint = 1, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -477,7 +482,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** THROTTLE */
+    /** THROTTLE - High speed blur passing by */
     public static function THROTTLE(channelOptions:uint = 6, grayScale:Boolean = false):PerlinTextureStyle {
         return new PerlinTextureStyle
         (
@@ -497,7 +502,7 @@ public class PerlinTextureStyles {
         );
     }
 
-    /** VORTEX */
+    /** VORTEX - Rapid intense movement, similar to fusion texture */
     public static function VORTEX(channelOptions:uint = 8, grayScale:Boolean = true):PerlinTextureStyle {
         return new PerlinTextureStyle
         (

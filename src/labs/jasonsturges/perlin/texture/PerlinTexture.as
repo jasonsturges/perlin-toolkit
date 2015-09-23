@@ -90,7 +90,6 @@ public class PerlinTexture extends Sprite {
         addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
     }
 
-
     public function set style(style:PerlinTextureStyle):void {
         fractalNoise = style.fractalNoise;
         octaves = style.octaves;
@@ -110,7 +109,6 @@ public class PerlinTexture extends Sprite {
                 (bitmapData.width == width) &&
                 (bitmapData.height == height))
             return;
-
 
         if ((width < 1) || (height < 1))
             return;
@@ -139,5 +137,6 @@ public class PerlinTexture extends Sprite {
     public function perlinNoise(baseX:Number, baseY:Number, numOctaves:uint, randomSeed:int, stitch:Boolean, fractalNoise:Boolean, channelOptions:uint = 7, grayScale:Boolean = false, offsets:Array = null):void {
         bitmapData.perlinNoise(baseX, baseY, numOctaves, randomSeed, stitch, fractalNoise, channelOptions, grayScale, offsets);
     }
+
 }
 }
