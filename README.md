@@ -1,10 +1,14 @@
 # Perlin Toolkit
 
-Randomly generated background animations using perlin noise to produce unique user experiences each visit.
+Randomly generated background animations using perlin noise producing unique experiences each instance.
 
 [Demo it in action here](http://labs.jasonsturges.com/blog/perlin-toolkit/).
 
-Choose a preset for animation in the component parameters to select an atmosphere of:
+![atomic-cloud](http://labs.jasonsturges.com/blog/perlin-toolkit/atomic-cloud.png)
+
+## Presets
+
+Choose a preset for animation to select an atmosphere of:
 
 - _**Aether**_ &mdash; Fluffy upward movement
 - _**Ambient**_ &mdash; Dusty still deep color tones
