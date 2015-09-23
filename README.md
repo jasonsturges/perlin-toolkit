@@ -6,23 +6,23 @@ Randomly generated background animations using perlin noise to produce unique us
 
 Choose a preset for animation in the component parameters to select an atmosphere of:
 
-- **Aether** &mdash; Fluffy upward movement
-- **Ambient** &mdash; Dusty still deep color tones
-- **Arc** &mdash; High voltage electric arcs
-- **Atomic Cloud** &mdash; Plumes of smokey mushroom clouds
-- **Aurora** &mdash; Gentle sweeping dancing lights
-- **Caustic** &mdash; Underwater patterns
-- **Fog** &mdash; Dense white mist
-- **Fusion** &mdash; Fast bursts of bright light
-- **Gasoline** &mdash; Rusty detailed smog
-- **Incandescent** &mdash; Soft light lit by white hot wire
-- **Ink** &mdash; Blotchy puddles spilling
-- **Lace** &mdash; Soft still of whites with a touch of color
-- **Lava** &mdash; Pools of red magma flowing
-- **Luminous** &mdash; Magical poofs of clouds
-- **Marble** &mdash; Still stone pattern
-- **Oil** &mdash; Slicks of rich color floating on the surface of water
-- **Rotary** &mdash; Dark circular movement
-- **Sulfur** &mdash; Rusty still, very similar to gasoline texture
-- **Throttle** &mdash; High speed blur passing by
-- **Vortex** &mdash; Rapid intense movement, similar to fusion texture
+- _**Aether**_ &mdash; Fluffy upward movement
+- _**Ambient**_ &mdash; Dusty still deep color tones
+- _**Arc**_ &mdash; High voltage electric arcs
+- _**Atomic Cloud**_ &mdash; Plumes of smokey mushroom clouds
+- _**Aurora**_ &mdash; Gentle sweeping dancing lights
+- _**Caustic**_ &mdash; Underwater patterns
+- _**Fog**_ &mdash; Dense white mist
+- _**Fusion**_ &mdash; Fast bursts of bright light
+- _**Gasoline**_ &mdash; Rusty detailed smog
+- _**Incandescent**_ &mdash; Soft light lit by white hot wire
+- _**Ink**_ &mdash; Blotchy puddles spilling
+- _**Lace**_ &mdash; Soft still of whites with a touch of color
+- _**Lava**_ &mdash; Pools of red magma flowing
+- _**Luminous**_ &mdash; Magical poofs of clouds
+- _**Marble**_ &mdash; Still stone pattern
+- _**Oil**_ &mdash; Slicks of rich color floating on the surface of water
+- _**Rotary**_ &mdash; Dark circular movement
+- _**Sulfur**_ &mdash; Rusty still, very similar to gasoline texture
+- _**Throttle**_ &mdash; High speed blur passing by
+- _**Vortex**_ &mdash; Rapid intense movement, similar to fusion texture
