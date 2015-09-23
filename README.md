@@ -35,6 +35,8 @@ Choose a preset for animation to select an atmosphere of:
 
 `PerlinTexture` is a `DisplayObject`, simply added to the stage.  Implementing `BitmapData`, it includes functionality to generate perlin noise, animate per frame, as well as handle resize operations.
 
+#### Using the Perlin Toolkit
+
 Perlin textures may be implemented via pure ActionScript such as:
 
     import labs.jasonsturges.perlin.texture.PerlinTexture;
@@ -44,7 +46,9 @@ Perlin textures may be implemented via pure ActionScript such as:
                                                         PerlinTextureStyles.AETHER());
     addChild(perlinTexture);
 
-This would create a 300x300 animated perlin texture using the `AETHER` preset, added to the display list.
+This would create a 300x300 pixel animated perlin texture using the `AETHER` preset, added to the display list.
+
+#### Using Presets
 
 Presets are provided via the `PerlinTextureStyles` factory utility, which can be applied to a perlin texture instance via the `style` property, such as:
 
@@ -73,3 +77,53 @@ Styles may be set realtime on a perlin texture instance.  Below, styles are rand
     });
     
     timer.start();
+
+## Best Practices
+
+Perlin noise is computationally intensive, and should not be overused in an implementation.  Overuse will slow frame rate or even lock runtime.  Both size and perlin operations need consideration for best performance.
+
+Limit octaves to 8 or lower.  Too many octaves will freeze the runtime.
+
+For larger viewport bounds, it is recommended to scale a smaller instance.  For example, generate perlin noise at 300x300 pixels and then upscale to fill a region.  As perlin noise is abstract, it typically looks good at any scale.
+
+The following example creates a perlin texture instance at 300x300, then resizes to fill the stage.  Resize the viewport window to review quality at different sizes.
+
+    package {
+    import flash.display.Sprite;
+    import flash.display.StageAlign;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    
+    import labs.jasonsturges.perlin.texture.PerlinTexture;
+    import labs.jasonsturges.perlin.texture.PerlinTextureStyles;
+    
+    public class Example extends Sprite {
+    
+        protected var perlinTexture:PerlinTexture;
+    
+        public function Example() {
+            stage.scaleMode = StageScaleMode.NO_SCALE;
+            stage.align = StageAlign.TOP_LEFT;
+    
+            // Instantiate at 300x300 pixels:
+            perlinTexture = new PerlinTexture(300, 300, PerlinTextureStyles.AETHER());
+            addChild(perlinTexture);
+    
+            // Resize by scaling
+            resize(stage.stageWidth, stage.stageHeight); // or dispatch a resize event
+            stage.addEventListener(Event.RESIZE, resizeHandler);
+        }
+    
+        protected function resize(width:Number, height:Number):void {
+            perlinTexture.scaleX = width / 300;
+            perlinTexture.scaleY = height / 300;
+        }
+    
+        protected function resizeHandler(event:Event):void {
+            resize(stage.stageWidth, stage.stageHeight);
+        }
+    
+    }
+    }
+
+
