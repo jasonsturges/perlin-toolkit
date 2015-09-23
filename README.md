@@ -6,7 +6,7 @@ Randomly generated background animations using perlin noise producing unique exp
 
 ![atomic-cloud](http://labs.jasonsturges.com/blog/perlin-toolkit/atomic-cloud.png)
 
-## Presets
+### Presets
 
 Choose a preset for animation to select an atmosphere of:
 
@@ -30,3 +30,46 @@ Choose a preset for animation to select an atmosphere of:
 - _**Sulfur**_ &mdash; Rusty still, very similar to gasoline texture
 - _**Throttle**_ &mdash; High speed blur passing by
 - _**Vortex**_ &mdash; Rapid intense movement, similar to fusion texture
+
+## Getting Started
+
+`PerlinTexture` is a `DisplayObject`, simply added to the stage.  Implementing `BitmapData`, it includes functionality to generate perlin noise, animate per frame, as well as handle resize operations.
+
+Perlin textures may be implemented via pure ActionScript such as:
+
+    import labs.jasonsturges.perlin.texture.PerlinTexture;
+    import labs.jasonsturges.perlin.texture.PerlinTextureStyles;
+
+    var perlinTexture:PerlinTexture = new PerlinTexture(300, 300,
+                                                        PerlinTextureStyles.AETHER());
+    addChild(perlinTexture);
+
+This would create a 300x300 animated perlin texture using the `AETHER` preset, added to the display list.
+
+Presets are provided via the `PerlinTextureStyles` factory utility, which can be applied to a perlin texture instance via the `style` property, such as:
+
+    perlinTexture.style = PerlinTextureStyles.LUMINOUS();
+
+Styles may be referenced by name, using the `PerlinTextureStyles.from()` method, as in:
+
+    perlinTexture.style = PerlinTextureStyles.from("LUMINOUS");
+
+Styles may be set realtime on a perlin texture instance.  Below, styles are random applied to an instance:
+
+    var styles:Vector.<String> = new <String>[
+        "AETHER",
+        "ATOMIC_CLOUD",
+        "FOG",
+        "LUMINOUS",
+        "OIL"
+    ];
+    
+    var perlinTexture:PerlinTexture = new PerlinTexture(300, 300);
+    addChild(perlinTexture);
+    
+    var timer:Timer = new Timer(1000);
+    timer.addEventListener(TimerEvent.TIMER, function ():void {
+        perlinTexture.style = PerlinTextureStyles.from(styles[Math.floor(Math.random() * styles.length)]);
+    });
+    
+    timer.start();
