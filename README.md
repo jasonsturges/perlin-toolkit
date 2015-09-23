@@ -58,7 +58,7 @@ Styles may be referenced by name, using the `PerlinTextureStyles.from()` method,
 
     perlinTexture.style = PerlinTextureStyles.from("LUMINOUS");
 
-Styles may be set realtime on a perlin texture instance.  Below, styles are random applied to an instance:
+Styles may be set realtime on a perlin texture instance.  Below, styles are randomly applied to an instance:
 
     var styles:Vector.<String> = new <String>[
         "AETHER",
