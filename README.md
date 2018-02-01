@@ -2,9 +2,9 @@
 
 Randomly generated background animations using perlin noise producing unique experiences each instance.
 
-[Demo it in action here](http://labs.jasonsturges.com/blog/perlin-toolkit/).
+[Demo it in action here](http://labs.jasonsturges.com/flash/perlin-toolkit/).
 
-![atomic-cloud](http://labs.jasonsturges.com/blog/perlin-toolkit/atomic-cloud.png)
+![screen-capture](http://labs.jasonsturges.com/flash/perlin-toolkit/screenshot.png)
 
 ### Presets
 
