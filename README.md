@@ -2,9 +2,9 @@
 
 Randomly generated background animations using perlin noise producing unique experiences each instance.
 
-[Demo it in action here](http://labs.jasonsturges.com/flash/perlin-toolkit/).
+![screen capture](https://user-images.githubusercontent.com/1213591/106398124-a9ed8980-63d6-11eb-8311-32888af3b213.png)
 
-![screen-capture](http://labs.jasonsturges.com/flash/perlin-toolkit/screenshot.png)
+[Video demonstration at YouTube](https://youtu.be/_fchwuTxFuY)
 
 ### Presets
 
